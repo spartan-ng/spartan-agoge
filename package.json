@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "serve:ssr:spartan-agoge": "node dist/spartan-agoge/server/server.mjs"
+    "serve:ssr:spartan-agoge": "node dist/spartan-agoge/server/server.mjs",
+    "fmt": "prettier --write ."
   },
   "private": true,
   "packageManager": "pnpm@10.32.1",
@@ -32,6 +33,8 @@
     "@types/node": "^20.17.19",
     "postcss": "^8.5.3",
     "prettier": "^3.8.1",
+    "prettier-plugin-organize-imports": "4.3.0",
+    "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "^4.1.12",
     "typescript": "~5.9.2"
   }
