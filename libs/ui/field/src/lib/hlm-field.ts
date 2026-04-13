@@ -1,5 +1,5 @@
 import { Directive, input } from '@angular/core';
-import { BrnField } from '@spartan-ng/brain/field';
+import { BrnField } from '../../../input/src/lib/brn-field';
 import { classes } from '@spartan-ng/helm/utils';
 import { cva, VariantProps } from 'class-variance-authority';
 
