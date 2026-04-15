@@ -1,4 +1,4 @@
-# spartan/ui Agoge
+# spartan/ui agoge
 
 Training ground for [spartan/ui](https://spartan.ng) components.
 

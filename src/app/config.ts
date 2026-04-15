@@ -1,5 +1,5 @@
 export const config = {
-  name: 'spartan/ui Agoge',
+  name: 'spartan/ui agoge',
   description: ' Training ground for spartan/ui components',
-  github: 'https://github.com/marcjulian/spartan-agoge',
+  github: 'https://github.com/spartan-ng/spartan-agoge',
 };

@@ -15,7 +15,7 @@ import { Newsletter } from '../ui/newsletter';
     <spartan-base-layout>
       <div class="flex flex-col items-center gap-4 py-10">
         <div class="text-center">
-          <h1 class="text-4xl md:text-5xl">spartan/ui Agoge</h1>
+          <h1 class="text-4xl md:text-5xl">spartan/ui agoge</h1>
           <p class="text-muted-foreground mt-3 text-lg text-balance md:text-xl">
             Training ground for spartan/ui components
           </p>
