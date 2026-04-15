@@ -4,10 +4,11 @@ import { lucideGithub } from '@ng-icons/lucide';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { config } from '../config';
 import { BaseLayout } from '../layouts/base.layout';
+import { Newsletter } from '../ui/newsletter';
 
 @Component({
   selector: 'spartan-home-page',
-  imports: [BaseLayout, HlmButtonImports, NgIcon],
+  imports: [BaseLayout, HlmButtonImports, NgIcon, Newsletter],
   providers: [provideIcons({ lucideGithub })],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -36,6 +37,8 @@ import { BaseLayout } from '../layouts/base.layout';
           </a>
         </div>
       </div>
+
+      <spartan-newsletter />
     </spartan-base-layout>
   `,
 })
