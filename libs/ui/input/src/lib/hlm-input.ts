@@ -1,6 +1,6 @@
 import { Directive, input, linkedSignal } from '@angular/core';
 import { BrnFieldControlDescribedBy } from '@spartan-ng/brain/field';
-import { BrnInput } from './brn-input';
+import { BrnInput } from '@spartan-ng/brain/input';
 import { classes } from '@spartan-ng/helm/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 
