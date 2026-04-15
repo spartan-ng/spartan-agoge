@@ -14,6 +14,7 @@
     "module": "preserve",
     "paths": {
       "@spartan-ng/helm/button": ["./libs/ui/button/src/index.ts"],
+      "@spartan-ng/helm/empty": ["./libs/ui/empty/src/index.ts"],
       "@spartan-ng/helm/field": ["./libs/ui/field/src/index.ts"],
       "@spartan-ng/helm/icon": ["./libs/ui/icon/src/index.ts"],
       "@spartan-ng/helm/input": ["./libs/ui/input/src/index.ts"],
