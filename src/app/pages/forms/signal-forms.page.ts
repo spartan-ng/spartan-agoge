@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
 import { BaseLayout } from '../../layouts/base.layout';
 import { SignalFormInputDemo } from './signal-forms--input.demo';
+import { SignalFormSelectDemo } from './signal-forms--select.demo';
 import { BugFormsDemo } from './signal-forms.demo';
 
 @Component({
   selector: 'spartan-signal-forms-page',
-  imports: [BaseLayout, BugFormsDemo, SignalFormInputDemo],
+  imports: [BaseLayout, BugFormsDemo, SignalFormInputDemo, SignalFormSelectDemo],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <spartan-base-layout>
@@ -38,10 +39,16 @@ import { BugFormsDemo } from './signal-forms.demo';
 
         <h2 id="examples" class="${hlmH3} pt-14">Examples</h2>
 
-        <h3 class="${hlmH4} pt-14">Input</h3>
+        <h3 id="input" class="${hlmH4} pt-14">Input</h3>
 
         <div class="mt-4">
           <spartan-signal-form-input-demo />
+        </div>
+
+        <h3 id="select" class="${hlmH4} pt-14">Select</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-select-demo />
         </div>
       </section>
     </spartan-base-layout>
