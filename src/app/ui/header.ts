@@ -15,10 +15,14 @@ import { ThemeService } from '../utils/theme';
     <header
       class="bg-background/40 sticky top-0 z-10 flex h-(--header-height) items-center gap-2 px-4 backdrop-blur-lg"
     >
-      <a routerLink="/" hlmBtn variant="ghost">
+      <a routerLink="/" hlmBtn variant="ghost" size="sm">
         <ng-icon name="lucideSwords" />
         agoge
       </a>
+
+      <nav>
+        <a hlmBtn variant="ghost" size="sm" routerLink="/forms"> Forms </a>
+      </nav>
 
       <div class="ml-auto flex gap-1">
         <a
@@ -30,6 +34,7 @@ import { ThemeService } from '../utils/theme';
           rel="noopener noreferrer"
         >
           <ng-icon name="lucideGithub" />
+          <span class="sr-only">GitHub</span>
         </a>
         <button hlmBtn size="icon-sm" variant="ghost" (click)="_themeService.toggle()">
           <ng-icon name="lucideMoon" class="not-dark:hidden" />
