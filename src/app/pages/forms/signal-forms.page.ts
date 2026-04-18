@@ -1,13 +1,22 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
 import { BaseLayout } from '../../layouts/base.layout';
+import { SignalFormCheckboxDemo } from './signal-forms--checkbox.demo';
 import { SignalFormInputDemo } from './signal-forms--input.demo';
 import { SignalFormSelectDemo } from './signal-forms--select.demo';
+import { SignalFormTextareaDemo } from './signal-forms--textarea.demo';
 import { BugFormsDemo } from './signal-forms.demo';
 
 @Component({
   selector: 'spartan-signal-forms-page',
-  imports: [BaseLayout, BugFormsDemo, SignalFormInputDemo, SignalFormSelectDemo],
+  imports: [
+    BaseLayout,
+    BugFormsDemo,
+    SignalFormInputDemo,
+    SignalFormTextareaDemo,
+    SignalFormSelectDemo,
+    SignalFormCheckboxDemo,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <spartan-base-layout>
@@ -45,10 +54,22 @@ import { BugFormsDemo } from './signal-forms.demo';
           <spartan-signal-form-input-demo />
         </div>
 
+        <h3 id="textarea" class="${hlmH4} pt-14">Textarea</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-textarea-demo />
+        </div>
+
         <h3 id="select" class="${hlmH4} pt-14">Select</h3>
 
         <div class="mt-4">
           <spartan-signal-form-select-demo />
+        </div>
+
+        <h3 id="checkbox" class="${hlmH4} pt-14">Checkbox</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-checkbox-demo />
         </div>
       </section>
     </spartan-base-layout>

@@ -12,8 +12,8 @@ import { HlmSelectImports } from '@spartan-ng/helm/select';
   template: `
     <hlm-card>
       <hlm-card-header>
-        <h3 hlmCardTitle>Profile Settings</h3>
-        <p hlmCardDescription>Update your profile information below.</p>
+        <h3 hlmCardTitle>Language Preferences</h3>
+        <p hlmCardDescription>Select your preferred spoken language.</p>
       </hlm-card-header>
       <div hlmCardContent>
         <form novalidate id="form-select-demo" (submit)="submit($event)">
@@ -76,7 +76,7 @@ export class SignalFormSelectDemo {
       return 'Auto';
     }
     const language = this.spokenLanguages.find((lang) => lang.value === value);
-    return language ? language.label : '';
+    return language ? language.label : 'Select';
   };
 
   // TODO empty string is handled as value and doesn't show placeholder
