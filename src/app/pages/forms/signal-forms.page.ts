@@ -1,0 +1,102 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
+import { BaseLayout } from '../../layouts/base.layout';
+import { SignalFormCheckboxDemo } from './signal-forms--checkbox.demo';
+import { SignalFormComplexDemo } from './signal-forms--complex.demo';
+import { SignalFormInputDemo } from './signal-forms--input.demo';
+import { SignalFormRadioGroupDemo } from './signal-forms--radio-group.demo';
+import { SignalFormSelectDemo } from './signal-forms--select.demo';
+import { SignalFormSwitchDemo } from './signal-forms--switch.demo';
+import { SignalFormTextareaDemo } from './signal-forms--textarea.demo';
+import { BugFormsDemo } from './signal-forms.demo';
+
+@Component({
+  selector: 'spartan-signal-forms-page',
+  imports: [
+    BaseLayout,
+    BugFormsDemo,
+    SignalFormInputDemo,
+    SignalFormTextareaDemo,
+    SignalFormSelectDemo,
+    SignalFormCheckboxDemo,
+    SignalFormRadioGroupDemo,
+    SignalFormSwitchDemo,
+    SignalFormComplexDemo,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <spartan-base-layout>
+      <section class="mx-auto flex max-w-(--breakpoint-md) flex-col px-4 pb-20">
+        <div>
+          <h1 class="${hlmH1}">Signal Forms</h1>
+          <p class="text-muted-foreground mt-2 text-lg">
+            Build forms in Angular using Signal Forms.
+          </p>
+        </div>
+
+        <p class="${hlmP}">
+          In this guide, we will take a look at building forms with Signal Forms. We'll cover
+          building forms with the
+          <code class="${hlmCode}">HlmField</code>
+          component, how to handle validation and how to display errors.
+        </p>
+
+        <h2 id="demo" class="${hlmH3} pt-(--header-height)">Demo</h2>
+
+        <p class="${hlmP}">
+          We are going to build the following form. It has a simple text input and a textarea. On
+          submit, we'll validate the form data and display any errors.
+        </p>
+
+        <div class="mt-4">
+          <spartan-bug-report-form />
+        </div>
+
+        <h2 id="examples" class="${hlmH3} pt-(--header-height)">Examples</h2>
+
+        <h3 id="input" class="${hlmH4} pt-(--header-height)">Input</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-input-demo />
+        </div>
+
+        <h3 id="textarea" class="${hlmH4} pt-(--header-height)">Textarea</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-textarea-demo />
+        </div>
+
+        <h3 id="select" class="${hlmH4} pt-(--header-height)">Select</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-select-demo />
+        </div>
+
+        <h3 id="checkbox" class="${hlmH4} pt-(--header-height)">Checkbox</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-checkbox-demo />
+        </div>
+
+        <h3 id="radio-group" class="${hlmH4} pt-(--header-height)">Radio Group</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-radio-group-demo />
+        </div>
+
+        <h3 id="switch" class="${hlmH4} pt-(--header-height)">Switch</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-switch-demo />
+        </div>
+
+        <h3 id="complex-form" class="${hlmH4} pt-(--header-height)">Complex Form</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-complex-demo />
+        </div>
+      </section>
+    </spartan-base-layout>
+  `,
+})
+export class SignalFormsPage {}
