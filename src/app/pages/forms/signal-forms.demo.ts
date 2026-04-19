@@ -107,9 +107,9 @@ export class BugFormsDemo {
 
     // marks all fields as touched, revealing validation errors
     submit(this.form, async () => {
-      const { title, description } = this._model();
+      const model = this._model();
 
-      console.log('Submitted with title:', title, 'and description:', description);
+      console.log('You submitted the following values:', JSON.stringify(model, null, 2));
     });
   }
 

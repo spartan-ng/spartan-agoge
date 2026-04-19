@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { form, FormField, required, submit } from '@angular/forms/signals';
+import { form, FormField, required, submit, validate } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
 import { HlmFieldImports } from '@spartan-ng/helm/field';
@@ -40,9 +40,9 @@ import { HlmSelectImports } from '@spartan-ng/helm/select';
                     <hlm-select-item value="auto">Auto</hlm-select-item>
                     <div hlmSelectSeparator></div>
                     @for (language of spokenLanguages; track $index) {
-                      <hlm-select-item [value]="language.value">{{
-                        language.label
-                      }}</hlm-select-item>
+                      <hlm-select-item [value]="language.value">
+                        {{ language.label }}
+                      </hlm-select-item>
                     }
                   </hlm-select-group>
                 </hlm-select-content>
@@ -76,17 +76,26 @@ export class SignalFormSelectDemo {
       return 'Auto';
     }
     const language = this.spokenLanguages.find((lang) => lang.value === value);
-    return language ? language.label : 'Select';
+    return language ? language.label : '';
   };
 
-  // TODO empty string is handled as value and doesn't show placeholder
-  protected readonly _model = signal({
-    language: '',
+  protected readonly _model = signal<{
+    language: string | null;
+  }>({
+    language: null,
   });
 
   public readonly form = form(this._model, (schemaPath) => {
     required(schemaPath.language, { message: 'Language is a required field.' });
-    // TODO custom validation auto detect not allowed
+    validate(schemaPath.language, ({ value }) => {
+      if (value() === 'auto') {
+        return {
+          kind: 'auto-detect',
+          message: 'Auto-detection is not allowed. Please select a specific language.',
+        };
+      }
+      return null;
+    });
   });
 
   async submit(event: Event) {
@@ -94,15 +103,15 @@ export class SignalFormSelectDemo {
 
     // marks all fields as touched, revealing validation errors
     submit(this.form, async () => {
-      const { language } = this._model();
+      const model = this._model();
 
-      console.log('Submitted with language:', language);
+      console.log('You submitted the following values:', JSON.stringify(model, null, 2));
     });
   }
 
   reset() {
     this.form().reset({
-      language: '',
+      language: null,
     });
   }
 }

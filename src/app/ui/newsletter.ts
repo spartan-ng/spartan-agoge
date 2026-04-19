@@ -33,8 +33,8 @@ import { HlmSpinnerImports } from '@spartan-ng/helm/spinner';
             <hlm-field-error validator="email">Invalid email address</hlm-field-error>
           </hlm-field>
           <hlm-field orientation="horizontal">
-            <button hlmBtn type="submit" [disabled]="_loading()">
-              @if (_loading()) {
+            <button hlmBtn type="submit" [disabled]="form().submitting()">
+              @if (form().submitting()) {
                 <hlm-spinner />
               }
               Subscribe
@@ -55,22 +55,22 @@ export class Newsletter {
     email(schemaPath.email, { message: 'Invalid email address' });
   });
 
-  protected readonly _loading = signal(false);
-
   async subscribe(event: Event) {
     event.preventDefault();
 
     submit(this.form, async () => {
-      this._loading.set(true);
       const { email } = this._model();
 
       // Simulate an API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       console.log('Subscribed with email:', email);
-      this._loading.set(false);
 
       toast.success('Enrolled successfully!');
+
+      this.form().reset({
+        email: '',
+      });
     });
   }
 }

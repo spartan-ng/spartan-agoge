@@ -65,9 +65,9 @@ export class SignalFormTextareaDemo {
 
     // marks all fields as touched, revealing validation errors
     submit(this.form, async () => {
-      const { about } = this._model();
+      const model = this._model();
 
-      console.log('Submitted with about:', about);
+      console.log('You submitted the following values:', JSON.stringify(model, null, 2));
     });
   }
 
