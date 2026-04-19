@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
 import { BaseLayout } from '../../layouts/base.layout';
 import { SignalFormCheckboxDemo } from './signal-forms--checkbox.demo';
+import { SignalFormComplexDemo } from './signal-forms--complex.demo';
 import { SignalFormInputDemo } from './signal-forms--input.demo';
 import { SignalFormRadioGroupDemo } from './signal-forms--radio-group.demo';
 import { SignalFormSelectDemo } from './signal-forms--select.demo';
@@ -20,6 +21,7 @@ import { BugFormsDemo } from './signal-forms.demo';
     SignalFormCheckboxDemo,
     SignalFormRadioGroupDemo,
     SignalFormSwitchDemo,
+    SignalFormComplexDemo,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -86,6 +88,12 @@ import { BugFormsDemo } from './signal-forms.demo';
 
         <div class="mt-4">
           <spartan-signal-form-switch-demo />
+        </div>
+
+        <h3 id="complex-form" class="${hlmH4} pt-(--header-height)">Complex Form</h3>
+
+        <div class="mt-4">
+          <spartan-signal-form-complex-demo />
         </div>
       </section>
     </spartan-base-layout>
