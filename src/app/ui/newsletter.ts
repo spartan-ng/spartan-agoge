@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { email, form, FormField, required, submit } from '@angular/forms/signals';
+import { email, form, FormField, FormRoot, required } from '@angular/forms/signals';
 import { toast } from '@spartan-ng/brain/sonner';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmFieldImports } from '@spartan-ng/helm/field';
@@ -8,7 +8,14 @@ import { HlmSpinnerImports } from '@spartan-ng/helm/spinner';
 
 @Component({
   selector: 'spartan-newsletter',
-  imports: [FormField, HlmButtonImports, HlmFieldImports, HlmSpinnerImports, HlmInputImports],
+  imports: [
+    FormRoot,
+    FormField,
+    HlmButtonImports,
+    HlmFieldImports,
+    HlmSpinnerImports,
+    HlmInputImports,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     id: 'newsletter',
@@ -24,7 +31,7 @@ import { HlmSpinnerImports } from '@spartan-ng/helm/spinner';
           Start your journy to master spartan/ui now!
         </p>
       </div>
-      <form class="max-w-md lg:col-span-5" (submit)="subscribe($event)">
+      <form [formRoot]="form" class="max-w-md lg:col-span-5">
         <hlm-field-group>
           <hlm-field>
             <input hlmInput type="email" placeholder="Enter your email" [formField]="form.email" />
@@ -50,27 +57,29 @@ export class Newsletter {
     email: '',
   });
 
-  public readonly form = form(this._model, (schemaPath) => {
-    required(schemaPath.email, { message: 'Email is required' });
-    email(schemaPath.email, { message: 'Invalid email address' });
-  });
+  public readonly form = form(
+    this._model,
+    (schemaPath) => {
+      required(schemaPath.email, { message: 'Email is required' });
+      email(schemaPath.email, { message: 'Invalid email address' });
+    },
+    {
+      submission: {
+        action: async () => {
+          const { email } = this._model();
 
-  async subscribe(event: Event) {
-    event.preventDefault();
+          // Simulate an API call
+          await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    submit(this.form, async () => {
-      const { email } = this._model();
+          console.log('Subscribed with email:', email);
 
-      // Simulate an API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+          toast.success('Enrolled successfully!');
 
-      console.log('Subscribed with email:', email);
-
-      toast.success('Enrolled successfully!');
-
-      this.form().reset({
-        email: '',
-      });
-    });
-  }
+          this.form().reset({
+            email: '',
+          });
+        },
+      },
+    },
+  );
 }
