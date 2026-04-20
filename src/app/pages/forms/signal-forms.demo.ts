@@ -92,7 +92,7 @@ export class BugFormsDemo {
     (schemaPath) => {
       required(schemaPath.title, { message: 'Title must be entered.' });
       minLength(schemaPath.title, 5, { message: 'Title must be at least 5 characters.' });
-      maxLength(schemaPath.title, 100, { message: 'Title cannot exceed 32 characters.' });
+      maxLength(schemaPath.title, 32, { message: 'Title cannot exceed 32 characters.' });
 
       required(schemaPath.description, { message: 'Description must be entered.' });
       minLength(schemaPath.description, 20, {
@@ -119,6 +119,8 @@ export class BugFormsDemo {
   descriptionLength = computed(() => this.form.description().value().length);
 
   reset() {
+    this.form().invalid()
+
     this.form().reset({
       title: '',
       description: '',
