@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
-import { form, FormField, maxLength, minLength, required, submit } from '@angular/forms/signals';
+import { form, FormField, FormRoot, maxLength, minLength, required } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
 import { HlmFieldImports } from '@spartan-ng/helm/field';
@@ -9,6 +9,7 @@ import { HlmInputGroupImports } from '@spartan-ng/helm/input-group';
 @Component({
   selector: 'spartan-bug-report-form',
   imports: [
+    FormRoot,
     FormField,
     HlmCardImports,
     HlmFieldImports,
@@ -24,8 +25,8 @@ import { HlmInputGroupImports } from '@spartan-ng/helm/input-group';
         <p hlmCardDescription>Help us improve by reporting bugs you encounter.</p>
       </hlm-card-header>
       <div hlmCardContent>
-        <!-- use novalidate to disable browser validation -->
-        <form novalidate id="form-bug-report" (submit)="submit($event)">
+        <!-- formRoot sets novalidate and handles form submission -->
+        <form [formRoot]="form" id="form-bug-report">
           <hlm-field-group>
             <hlm-field>
               <label hlmFieldLabel for="title">Bug Title</label>
@@ -86,32 +87,36 @@ export class BugFormsDemo {
     description: '',
   });
 
-  public readonly form = form(this._model, (schemaPath) => {
-    required(schemaPath.title, { message: 'Title must be entered.' });
-    minLength(schemaPath.title, 5, { message: 'Title must be at least 5 characters.' });
-    maxLength(schemaPath.title, 100, { message: 'Title cannot exceed 32 characters.' });
+  public readonly form = form(
+    this._model,
+    (schemaPath) => {
+      required(schemaPath.title, { message: 'Title must be entered.' });
+      minLength(schemaPath.title, 5, { message: 'Title must be at least 5 characters.' });
+      maxLength(schemaPath.title, 100, { message: 'Title cannot exceed 32 characters.' });
 
-    required(schemaPath.description, { message: 'Description must be entered.' });
-    minLength(schemaPath.description, 20, {
-      message: 'Description must be at least 20 characters.',
-    });
-    maxLength(schemaPath.description, 100, {
-      message: 'Description must be at most 100 characters',
-    });
-  });
+      required(schemaPath.description, { message: 'Description must be entered.' });
+      minLength(schemaPath.description, 20, {
+        message: 'Description must be at least 20 characters.',
+      });
+      maxLength(schemaPath.description, 100, {
+        message: 'Description must be at most 100 characters',
+      });
+    },
+    {
+      // triggers the submission flow by calling `submit()` - marks all fields as touched, revealing validation errors
+      submission: {
+        action: async () => {
+          const model = this._model();
+
+          console.log('You submitted the following values:', JSON.stringify(model, null, 2));
+
+          // submit to api
+        },
+      },
+    },
+  );
 
   descriptionLength = computed(() => this.form.description().value().length);
-
-  async submit(event: Event) {
-    event.preventDefault();
-
-    // marks all fields as touched, revealing validation errors
-    submit(this.form, async () => {
-      const model = this._model();
-
-      console.log('You submitted the following values:', JSON.stringify(model, null, 2));
-    });
-  }
 
   reset() {
     this.form().reset({
