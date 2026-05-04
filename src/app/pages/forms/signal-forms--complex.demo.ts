@@ -41,7 +41,7 @@ import { HlmSwitchImports } from '@spartan-ng/helm/switch';
                         <hlm-field-title>{{ plan.title }}</hlm-field-title>
                         <hlm-field-description>{{ plan.description }}</hlm-field-description>
                       </hlm-field-content>
-                      <hlm-radio [value]="plan.id" [id]="'complex-plan-' + plan.id">
+                      <hlm-radio [value]="plan.id" [inputId]="'complex-plan-' + plan.id">
                         <hlm-radio-indicator indicator />
                       </hlm-radio>
                     </hlm-field>
@@ -88,7 +88,7 @@ import { HlmSwitchImports } from '@spartan-ng/helm/switch';
                     [forceInvalid]="form.addons().invalid() && form.addons().touched()"
                   >
                     <hlm-checkbox
-                      [id]="'addon-' + addon.id"
+                      [inputId]="'addon-' + addon.id"
                       [forceInvalid]="form.addons().invalid() && form.addons().touched()"
                       [checked]="form.addons().value().includes(addon.id)"
                       (checkedChange)="handleChange($event, addon.id)"
@@ -121,7 +121,7 @@ import { HlmSwitchImports } from '@spartan-ng/helm/switch';
                   </hlm-field-error>
                 }
               </hlm-field-content>
-              <hlm-switch id="email-notifications" [formField]="form.emailNotifications" />
+              <hlm-switch inputId="email-notifications" [formField]="form.emailNotifications" />
             </hlm-field>
           </hlm-field-group>
         </form>

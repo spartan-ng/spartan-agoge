@@ -25,7 +25,7 @@ import { HlmFieldImports } from '@spartan-ng/helm/field';
               </hlm-field-description>
               <hlm-field-group>
                 <hlm-field orientation="horizontal">
-                  <hlm-checkbox id="responses" [formField]="form.responses" />
+                  <hlm-checkbox inputId="responses" [formField]="form.responses" />
                   <label hlmFieldLabel class="font-normal" for="responses">
                     Push notifications
                   </label>
@@ -46,7 +46,7 @@ import { HlmFieldImports } from '@spartan-ng/helm/field';
                       [forceInvalid]="form.tasks().invalid() && form.tasks().touched()"
                     >
                       <hlm-checkbox
-                        [id]="'task-' + task.id"
+                        [inputId]="'task-' + task.id"
                         [forceInvalid]="form.tasks().invalid() && form.tasks().touched()"
                         [checked]="form.tasks().value().includes(task.id)"
                         (checkedChange)="handleChange($event, task.id)"

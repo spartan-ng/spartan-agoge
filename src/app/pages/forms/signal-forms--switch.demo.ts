@@ -30,7 +30,7 @@ import { HlmSwitchImports } from '@spartan-ng/helm/switch';
                   </hlm-field-error>
                 }
               </hlm-field-content>
-              <hlm-switch id="two-factor" [formField]="form.twoFactor" />
+              <hlm-switch inputId="two-factor" [formField]="form.twoFactor" />
             </hlm-field>
           </hlm-field-group>
         </form>

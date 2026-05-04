@@ -119,8 +119,6 @@ export class BugFormsDemo {
   descriptionLength = computed(() => this.form.description().value().length);
 
   reset() {
-    this.form().invalid()
-
     this.form().reset({
       title: '',
       description: '',
