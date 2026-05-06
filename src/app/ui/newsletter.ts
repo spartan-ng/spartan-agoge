@@ -28,7 +28,7 @@ import { HlmSpinnerImports } from '@spartan-ng/helm/spinner';
           Enroll to the spartan/ui agoge trainings program
         </h2>
         <p class="text-muted-foreground text-lg text-balance">
-          Start your journy to master spartan/ui now!
+          Start your journey to master spartan/ui now!
         </p>
       </div>
       <form [formRoot]="form" class="max-w-md lg:col-span-5">
