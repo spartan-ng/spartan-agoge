@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:pages": "ng build --base-href /spartan-agoge/ && cp dist/spartan-agoge/browser/index.html dist/spartan-agoge/browser/404.html",
+    "build:pages": "ng build && cp dist/spartan-agoge/browser/index.html dist/spartan-agoge/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "serve:ssr:spartan-agoge": "node dist/spartan-agoge/server/server.mjs",
     "fmt": "prettier --write ."
