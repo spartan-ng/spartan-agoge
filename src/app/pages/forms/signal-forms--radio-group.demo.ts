@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { form, FormField, required, submit } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
@@ -9,7 +9,6 @@ import { HlmRadioGroupImports } from '@spartan-ng/helm/radio-group';
   selector: 'spartan-signal-form-radio-group-demo',
   imports: [FormField, HlmCardImports, HlmFieldImports, HlmRadioGroupImports, HlmButtonImports],
   host: { class: 'w-full sm:max-w-md' },
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <hlm-card>
       <hlm-card-header>

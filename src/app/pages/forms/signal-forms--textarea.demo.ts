@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { form, FormField, maxLength, minLength, required, submit } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
@@ -9,7 +9,6 @@ import { HlmTextareaImports } from '@spartan-ng/helm/textarea';
   selector: 'spartan-signal-form-textarea-demo',
   imports: [FormField, HlmCardImports, HlmFieldImports, HlmTextareaImports, HlmButtonImports],
   host: { class: 'w-full sm:max-w-md' },
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <hlm-card>
       <hlm-card-header>

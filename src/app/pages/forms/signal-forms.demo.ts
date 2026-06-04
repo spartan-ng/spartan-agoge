@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { form, FormField, FormRoot, maxLength, minLength, required } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
@@ -17,7 +17,6 @@ import { HlmInputGroupImports } from '@spartan-ng/helm/input-group';
     HlmInputImports,
     HlmInputGroupImports,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <hlm-card>
       <hlm-card-header>

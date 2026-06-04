@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   form,
   FormField,
@@ -17,7 +17,6 @@ import { HlmInputImports } from '@spartan-ng/helm/input';
   selector: 'spartan-signal-form-input-demo',
   imports: [FormField, HlmCardImports, HlmFieldImports, HlmInputImports, HlmButtonImports],
   host: { class: 'w-full sm:max-w-md' },
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <hlm-card>
       <hlm-card-header>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { disabled, form, FormField, minLength, required, submit } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
@@ -9,7 +9,6 @@ import { HlmFieldImports } from '@spartan-ng/helm/field';
   selector: 'spartan-signal-form-checkbox-demo',
   imports: [FormField, HlmCardImports, HlmFieldImports, HlmCheckboxImports, HlmButtonImports],
   host: { class: 'w-full sm:max-w-md' },
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <hlm-card>
       <hlm-card-header>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { form, FormField, required, submit, validate } from '@angular/forms/signals';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmCardImports } from '@spartan-ng/helm/card';
@@ -9,7 +9,6 @@ import { HlmSelectImports } from '@spartan-ng/helm/select';
   selector: 'spartan-signal-form-select-demo',
   imports: [FormField, HlmCardImports, HlmFieldImports, HlmSelectImports, HlmButtonImports],
   host: { class: 'w-full sm:max-w-md' },
-  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <hlm-card>
       <hlm-card-header>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideGithub } from '@ng-icons/lucide';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
@@ -10,7 +10,6 @@ import { Newsletter } from '../ui/newsletter';
   selector: 'spartan-home-page',
   imports: [BaseLayout, HlmButtonImports, NgIcon, Newsletter],
   providers: [provideIcons({ lucideGithub })],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <spartan-base-layout>
       <div class="flex flex-col items-center gap-4 py-10">
