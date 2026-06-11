@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmEmptyImports } from '@spartan-ng/helm/empty';
@@ -7,7 +7,6 @@ import { BaseLayout } from '../layouts/base.layout';
 @Component({
   selector: 'spartan-404-page',
   imports: [BaseLayout, HlmEmptyImports, HlmButtonImports, RouterLink],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <spartan-base-layout mainClasses="min-h-[80vh] flex items-center">
       <hlm-empty>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
 import { BaseLayout } from '../../layouts/base.layout';
 import { SignalFormCheckboxDemo } from './signal-forms--checkbox.demo';
@@ -23,7 +23,6 @@ import { BugFormsDemo } from './signal-forms.demo';
     SignalFormSwitchDemo,
     SignalFormComplexDemo,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <spartan-base-layout>
       <section class="mx-auto flex max-w-(--breakpoint-md) flex-col px-4 pb-20">

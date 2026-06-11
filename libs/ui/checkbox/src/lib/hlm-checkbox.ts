@@ -70,9 +70,8 @@ export class HlmCheckbox implements ControlValueAccessor {
 
   protected readonly _computedClass = computed(() =>
     hlm(
-      'border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 peer size-4 shrink-0 cursor-default rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50',
+      'border-input dark:bg-input/30 data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary data-checked:border-primary data-[matches-spartan-invalid=true]:aria-checked:border-primary data-[matches-spartan-invalid=true]:border-destructive dark:data-[matches-spartan-invalid=true]:border-destructive/50 focus-visible:border-ring focus-visible:ring-ring/50 data-[matches-spartan-invalid=true]:ring-destructive/20 dark:data-[matches-spartan-invalid=true]:ring-destructive/40 peer flex size-4 shrink-0 cursor-default items-center justify-center rounded-[4px] border shadow-xs transition-shadow outline-none group-has-disabled/field:opacity-50 focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50 data-[matches-spartan-invalid=true]:ring-3',
       this.userClass(),
-      this._disabled() ? 'cursor-not-allowed opacity-50' : '',
       this._errorStateClass(),
     ),
   );
@@ -90,7 +89,11 @@ export class HlmCheckbox implements ControlValueAccessor {
   public readonly ariaDescribedby = input<string | null>(null, { alias: 'aria-describedby' });
 
   /** The checked state of the checkbox. */
-  public readonly checked = model<boolean>(false);
+  public readonly checkedInput = input<boolean, BooleanInput>(false, {
+    alias: 'checked',
+    transform: booleanAttribute,
+  });
+  public readonly checked = linkedSignal(this.checkedInput);
 
   /** Emits when checked state changes. */
   public readonly checkedChange = output<boolean>();
