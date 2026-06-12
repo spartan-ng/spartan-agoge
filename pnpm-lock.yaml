@@ -42,8 +42,8 @@ importers:
         specifier: 33.2.4
         version: 33.2.4
       '@spartan-ng/brain':
-        specifier: 0.0.1-alpha.710
-        version: 0.0.1-alpha.710(@angular/cdk@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/forms@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(clsx@2.1.1)(luxon@3.7.2)(rxjs@7.8.2)(tailwindcss@4.3.0)
+        specifier: 0.0.1-alpha.711
+        version: 0.0.1-alpha.711(@angular/cdk@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/forms@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(clsx@2.1.1)(luxon@3.7.2)(rxjs@7.8.2)(tailwindcss@4.3.0)(tw-animate-css@1.4.0)
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -73,8 +73,8 @@ importers:
         specifier: 22.0.1
         version: 22.0.1(@angular/compiler@22.0.1)(typescript@6.0.3)
       '@spartan-ng/cli':
-        specifier: 0.0.1-alpha.710
-        version: 0.0.1-alpha.710(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@angular/compiler@22.0.1)(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@zkochan/js-yaml@0.0.7)(chokidar@5.0.0)(debug@4.4.3)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(react-refresh@0.18.0)(rxjs@7.8.2)(tslib@2.8.1)
+        specifier: 0.0.1-alpha.711
+        version: 0.0.1-alpha.711(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@angular/compiler@22.0.1)(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@zkochan/js-yaml@0.0.7)(chokidar@5.0.0)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(react-refresh@0.18.0)(rxjs@7.8.2)(tslib@2.8.1)
       '@tailwindcss/postcss':
         specifier: 4.3.0
         version: 4.3.0
@@ -286,19 +286,6 @@ packages:
   '@angular/compiler@22.0.1':
     resolution: {integrity: sha512-J8lcmYXJCGZn1+CHx3LSgq6rtS5Efc1/Nafcd/v8VZN2NrsFIkIlTbnAIUxcwHwYxzZs4X5CGfX+5ZIB4X9rUw==}
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
-
-  '@angular/core@22.0.0':
-    resolution: {integrity: sha512-H4lzunB+LUNylQ3hZGYWDz1NfNAdFzPdOadwuS6VpPyxF4Ti0MLyAfx7NDnyTrmdY2/PFx8I6jXrveNlIsORXg==}
-    engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
-    peerDependencies:
-      '@angular/compiler': 22.0.0
-      rxjs: ^6.5.3 || ^7.4.0
-      zone.js: ~0.15.0 || ~0.16.0
-    peerDependenciesMeta:
-      '@angular/compiler':
-        optional: true
-      zone.js:
-        optional: true
 
   '@angular/core@22.0.1':
     resolution: {integrity: sha512-Sk0fz+LR2q6QhJJtCV9ElN1GzoEX6lOB4difMqpOC0yRh/ue+9iKd+x3RRiL4p+dnAiRLQYAKqsXkYlqUm2SMg==}
@@ -2490,8 +2477,8 @@ packages:
   '@sinclair/typebox@0.34.49':
     resolution: {integrity: sha512-brySQQs7Jtn0joV8Xh9ZV/hZb9Ozb0pmazDIASBkYKCjXrXU3mpcFahmK/z4YDhGkQvP9mWJbVyahdtU5wQA+A==}
 
-  '@spartan-ng/brain@0.0.1-alpha.710':
-    resolution: {integrity: sha512-n6DiKRSA9Khwhrqohec/2I+zDZOTBY8YCBsZCssOroN1xCRSFnT80SZc4fNUYaZWJR9ysCY6fd7aPSQbKFO2Bg==}
+  '@spartan-ng/brain@0.0.1-alpha.711':
+    resolution: {integrity: sha512-2mhcmuQOU+YS1xBVv7NrCBrOhT1TYk7JAooX+3CbHA1CndQPsTF1jIrFTkIVFe7OdLKJ2bTzQqfXYWuV6vvX8A==}
     peerDependencies:
       '@angular/cdk': '>=21.0.0 <23.0.0'
       '@angular/common': '>=21.0.0 <23.0.0'
@@ -2500,13 +2487,14 @@ packages:
       clsx: '>=2.0.0'
       luxon: '>=3.0.0'
       rxjs: '>=6.6.0'
-      tailwindcss: '>=3.3.0'
+      tailwindcss: '>=4.0.0'
+      tw-animate-css: '>=1.0.0'
     peerDependenciesMeta:
       luxon:
         optional: true
 
-  '@spartan-ng/cli@0.0.1-alpha.710':
-    resolution: {integrity: sha512-aXiMwf2TKSMHtK2G9Nn9B8UF0PmVmZc2QzthyKV64dyokfSNboZa5iDUeJ1vlojnsmAnK8IoEFnuHxt0/M9R8Q==}
+  '@spartan-ng/cli@0.0.1-alpha.711':
+    resolution: {integrity: sha512-yeeQwDbjPTsmA1wMcW2EInirqNZoLZwgg11tUPSP88aaNVh/MXd79mG4QXnRZpBwlYZDtDxEIB5dm5HV5bk3Og==}
     peerDependencies:
       tslib: ^2.3.0
 
@@ -6715,13 +6703,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@angular/core@22.0.0(@angular/compiler@22.0.1)(rxjs@7.8.2)':
-    dependencies:
-      rxjs: 7.8.2
-      tslib: 2.8.1
-    optionalDependencies:
-      '@angular/compiler': 22.0.1
-
   '@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)':
     dependencies:
       rxjs: 7.8.2
@@ -8473,17 +8454,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nx/angular@22.6.4(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@schematics/angular@21.2.14(chokidar@5.0.0))(@zkochan/js-yaml@0.0.7)(debug@4.4.3)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(react-refresh@0.18.0)(rxjs@7.8.2)(typescript@6.0.3)':
+  '@nx/angular@22.6.4(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@schematics/angular@21.2.14(chokidar@5.0.0))(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(react-refresh@0.18.0)(rxjs@7.8.2)(typescript@6.0.3)':
     dependencies:
       '@angular-devkit/core': 22.0.1(chokidar@5.0.0)
       '@angular-devkit/schematics': 22.0.1(chokidar@5.0.0)
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/eslint': 22.6.4(@babel/traverse@7.29.0)(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
-      '@nx/module-federation': 22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(typescript@6.0.3)
-      '@nx/rspack': 22.6.4(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(less@4.5.1)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(react-refresh@0.18.0)(typescript@6.0.3)
-      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(debug@4.4.3)(nx@22.6.4(debug@4.4.3))
-      '@nx/webpack': 22.6.4(@babel/traverse@7.29.0)(@rspack/core@1.6.8)(lightningcss@1.32.0)(nx@22.6.4(debug@4.4.3))(typescript@6.0.3)
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/eslint': 22.6.4(@babel/traverse@7.29.0)(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
+      '@nx/module-federation': 22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(typescript@6.0.3)
+      '@nx/rspack': 22.6.4(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(less@4.5.1)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(react-refresh@0.18.0)(typescript@6.0.3)
+      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
+      '@nx/webpack': 22.6.4(@babel/traverse@7.29.0)(@rspack/core@1.6.8)(lightningcss@1.32.0)(nx@22.6.4)(typescript@6.0.3)
       '@nx/workspace': 22.6.4
       '@phenomnomnominal/tsquery': 6.1.4(typescript@6.0.3)
       '@schematics/angular': 21.2.14(chokidar@5.0.0)
@@ -8533,21 +8514,21 @@ snapshots:
       - webpack-cli
       - webpack-hot-middleware
 
-  '@nx/devkit@22.6.4(nx@22.6.4(debug@4.4.3))':
+  '@nx/devkit@22.6.4(nx@22.6.4)':
     dependencies:
       '@zkochan/js-yaml': 0.0.7
       ejs: 3.1.10
       enquirer: 2.3.6
       minimatch: 10.2.4
-      nx: 22.6.4(debug@4.4.3)
+      nx: 22.6.4
       semver: 7.7.4
       tslib: 2.8.1
       yargs-parser: 21.1.1
 
-  '@nx/eslint@22.6.4(@babel/traverse@7.29.0)(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(nx@22.6.4(debug@4.4.3))':
+  '@nx/eslint@22.6.4(@babel/traverse@7.29.0)(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(nx@22.6.4)':
     dependencies:
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       eslint: 10.2.0(jiti@2.6.1)
       semver: 7.7.4
       tslib: 2.8.1
@@ -8563,7 +8544,7 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/js@22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))':
+  '@nx/js@22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-proposal-decorators': 7.29.0(@babel/core@7.29.0)
@@ -8572,7 +8553,7 @@ snapshots:
       '@babel/preset-env': 7.29.2(@babel/core@7.29.0)
       '@babel/preset-typescript': 7.28.5(@babel/core@7.29.0)
       '@babel/runtime': 7.29.2
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
       '@nx/workspace': 22.6.4
       '@zkochan/js-yaml': 0.0.7
       babel-plugin-const-enum: 1.2.0(@babel/core@7.29.0)
@@ -8599,14 +8580,14 @@ snapshots:
       - nx
       - supports-color
 
-  '@nx/module-federation@22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(typescript@6.0.3)':
+  '@nx/module-federation@22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(typescript@6.0.3)':
     dependencies:
       '@module-federation/enhanced': 2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0)
       '@module-federation/node': 2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0)
       '@module-federation/sdk': 2.3.1(node-fetch@2.7.0(encoding@0.1.13))
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
-      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(debug@4.4.3)(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
+      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       '@rspack/core': 1.6.8
       express: 4.22.1
       http-proxy-middleware: 3.0.5
@@ -8663,14 +8644,14 @@ snapshots:
   '@nx/nx-win32-x64-msvc@22.6.4':
     optional: true
 
-  '@nx/rspack@22.6.4(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(less@4.5.1)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(react-refresh@0.18.0)(typescript@6.0.3)':
+  '@nx/rspack@22.6.4(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(less@4.5.1)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(react-refresh@0.18.0)(typescript@6.0.3)':
     dependencies:
       '@module-federation/enhanced': 2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0)
       '@module-federation/node': 2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0)
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
-      '@nx/module-federation': 22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(typescript@6.0.3)
-      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(debug@4.4.3)(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
+      '@nx/module-federation': 22.6.4(@babel/traverse@7.29.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(typescript@6.0.3)
+      '@nx/web': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       '@phenomnomnominal/tsquery': 6.1.4(typescript@6.0.3)
       '@rspack/core': 1.6.8
       '@rspack/dev-server': 1.2.1(@rspack/core@1.6.8)(tslib@2.8.1)(webpack@5.106.0)
@@ -8722,12 +8703,12 @@ snapshots:
       - webpack-cli
       - webpack-hot-middleware
 
-  '@nx/web@22.6.4(@babel/traverse@7.29.0)(debug@4.4.3)(nx@22.6.4(debug@4.4.3))':
+  '@nx/web@22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)':
     dependencies:
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       detect-port: 1.6.1
-      http-server: 14.1.1(debug@4.4.3)
+      http-server: 14.1.1
       picocolors: 1.1.1
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -8739,11 +8720,11 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/webpack@22.6.4(@babel/traverse@7.29.0)(@rspack/core@1.6.8)(lightningcss@1.32.0)(nx@22.6.4(debug@4.4.3))(typescript@6.0.3)':
+  '@nx/webpack@22.6.4(@babel/traverse@7.29.0)(@rspack/core@1.6.8)(lightningcss@1.32.0)(nx@22.6.4)(typescript@6.0.3)':
     dependencies:
       '@babel/core': 7.29.0
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       '@phenomnomnominal/tsquery': 6.1.4(typescript@6.0.3)
       ajv: 8.20.0
       autoprefixer: 10.4.27(postcss@8.5.15)
@@ -8802,11 +8783,11 @@ snapshots:
 
   '@nx/workspace@22.6.4':
     dependencies:
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
+      '@nx/devkit': 22.6.4(nx@22.6.4)
       '@zkochan/js-yaml': 0.0.7
       chalk: 4.1.2
       enquirer: 2.3.6
-      nx: 22.6.4(debug@4.4.3)
+      nx: 22.6.4
       picomatch: 4.0.4
       semver: 7.7.4
       tslib: 2.8.1
@@ -9202,8 +9183,8 @@ snapshots:
 
   '@sinclair/typebox@0.34.49': {}
 
-  '@spartan-ng/brain@0.0.1-alpha.710(@angular/cdk@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/forms@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(clsx@2.1.1)(luxon@3.7.2)(rxjs@7.8.2)(tailwindcss@4.3.0)':
-    dependencies:
+  ? '@spartan-ng/brain@0.0.1-alpha.711(@angular/cdk@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/forms@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2))(clsx@2.1.1)(luxon@3.7.2)(rxjs@7.8.2)(tailwindcss@4.3.0)(tw-animate-css@1.4.0)'
+  : dependencies:
       '@angular/cdk': 22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(@angular/platform-browser@22.0.1(@angular/common@22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@angular/common': 22.0.1(@angular/core@22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core': 22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)
@@ -9212,22 +9193,23 @@ snapshots:
       rxjs: 7.8.2
       tailwindcss: 4.3.0
       tslib: 2.8.1
+      tw-animate-css: 1.4.0
     optionalDependencies:
       luxon: 3.7.2
 
-  '@spartan-ng/cli@0.0.1-alpha.710(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@angular/compiler@22.0.1)(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@zkochan/js-yaml@0.0.7)(chokidar@5.0.0)(debug@4.4.3)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(react-refresh@0.18.0)(rxjs@7.8.2)(tslib@2.8.1)':
+  '@spartan-ng/cli@0.0.1-alpha.711(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@angular/compiler@22.0.1)(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@zkochan/js-yaml@0.0.7)(chokidar@5.0.0)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(react-refresh@0.18.0)(rxjs@7.8.2)(tslib@2.8.1)':
     dependencies:
-      '@angular/core': 22.0.0(@angular/compiler@22.0.1)(rxjs@7.8.2)
-      '@nx/angular': 22.6.4(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@schematics/angular@21.2.14(chokidar@5.0.0))(@zkochan/js-yaml@0.0.7)(debug@4.4.3)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4(debug@4.4.3))(react-refresh@0.18.0)(rxjs@7.8.2)(typescript@6.0.3)
-      '@nx/devkit': 22.6.4(nx@22.6.4(debug@4.4.3))
-      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4(debug@4.4.3))
+      '@angular/core': 22.0.1(@angular/compiler@22.0.1)(rxjs@7.8.2)
+      '@nx/angular': 22.6.4(@angular-devkit/core@22.0.1(chokidar@5.0.0))(@angular-devkit/schematics@22.0.1(chokidar@5.0.0))(@angular/build@22.0.1(8528396aab71788dfd79b49a41e9cc40))(@babel/traverse@7.29.0)(@module-federation/enhanced@2.3.1(@rspack/core@1.6.8)(node-fetch@2.7.0(encoding@0.1.13))(typescript@6.0.3)(webpack@5.106.0))(@module-federation/node@2.7.39(@rspack/core@1.6.8)(typescript@6.0.3)(webpack@5.106.0))(@rspack/core@1.6.8)(@schematics/angular@21.2.14(chokidar@5.0.0))(@zkochan/js-yaml@0.0.7)(eslint@10.2.0(jiti@2.6.1))(less@4.5.1)(lightningcss@1.32.0)(node-fetch@2.7.0(encoding@0.1.13))(nx@22.6.4)(react-refresh@0.18.0)(rxjs@7.8.2)(typescript@6.0.3)
+      '@nx/devkit': 22.6.4(nx@22.6.4)
+      '@nx/js': 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
       '@nx/workspace': 22.6.4
       '@phenomnomnominal/tsquery': 6.2.0(typescript@6.0.3)
       '@schematics/angular': 21.2.14(chokidar@5.0.0)
       enquirer: 2.3.6
       jsonc-eslint-parser: 2.4.2
       node-html-parser: 7.1.0
-      nx: 22.6.4(debug@4.4.3)
+      nx: 22.6.4
       picocolors: 1.1.1
       postcss: 8.5.15
       postcss-selector-parser: 7.1.1
@@ -9814,7 +9796,7 @@ snapshots:
       postcss: 8.5.15
       postcss-value-parser: 4.2.0
 
-  axios@1.12.0(debug@4.4.3):
+  axios@1.12.0:
     dependencies:
       follow-redirects: 1.15.11(debug@4.4.3)
       form-data: 4.0.5
@@ -11101,7 +11083,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  http-server@14.1.1(debug@4.4.3):
+  http-server@14.1.1:
     dependencies:
       basic-auth: 2.0.1
       chalk: 4.1.2
@@ -11853,14 +11835,14 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nx@22.6.4(debug@4.4.3):
+  nx@22.6.4:
     dependencies:
       '@ltd/j-toml': 1.38.0
       '@napi-rs/wasm-runtime': 0.2.4
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
-      axios: 1.12.0(debug@4.4.3)
+      axios: 1.12.0
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
