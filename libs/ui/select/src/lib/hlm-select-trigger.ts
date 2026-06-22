@@ -31,7 +31,7 @@ import type { ClassValue } from 'clsx';
       <ng-content />
       <ng-icon
         name="lucideChevronDown"
-        class="text-muted-foreground ms-auto text-[calc(var(--spacing)*4)]"
+        class="text-muted-foreground ms-auto text-[length:--spacing(4)]"
       />
     </button>
   `,
