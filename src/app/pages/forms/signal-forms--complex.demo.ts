@@ -102,12 +102,12 @@ import { HlmSwitchImports } from '@spartan-ng/helm/switch';
                   </hlm-field>
                 }
               </hlm-field-group>
-              @if (form.addons().invalid() && form.addons().touched()) {
-                @for (error of form.addons().errors(); track error) {
-                  <hlm-field-error> {{ error.message }}</hlm-field-error>
-                }
-              }
             </fieldset>
+            @if (form.addons().invalid() && form.addons().touched()) {
+              @for (error of form.addons().errors(); track error) {
+                <hlm-field-error> {{ error.message }}</hlm-field-error>
+              }
+            }
             <hlm-field-separator />
             <hlm-field orientation="horizontal">
               <hlm-field-content>

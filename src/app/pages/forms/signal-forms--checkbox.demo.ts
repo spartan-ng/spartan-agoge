@@ -57,12 +57,12 @@ import { HlmFieldImports } from '@spartan-ng/helm/field';
                     </hlm-field>
                   }
                 </hlm-field-group>
-                @if (form.tasks().invalid() && form.tasks().touched()) {
-                  @for (error of form.tasks().errors(); track error) {
-                    <hlm-field-error> {{ error.message }}</hlm-field-error>
-                  }
-                }
               </fieldset>
+              @if (form.tasks().invalid() && form.tasks().touched()) {
+                @for (error of form.tasks().errors(); track error) {
+                  <hlm-field-error> {{ error.message }}</hlm-field-error>
+                }
+              }
             </hlm-field-group>
           </hlm-field-group>
         </form>
