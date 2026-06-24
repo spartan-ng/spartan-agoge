@@ -7,8 +7,6 @@ import { classes } from '@spartan-ng/helm/utils';
 })
 export class HlmCardFooter {
   constructor() {
-    classes(
-      () => 'flex items-center rounded-b-xl px-(--card-spacing) [.border-t]:pt-(--card-spacing)',
-    );
+    classes(() => 'bg-muted/50 flex items-center rounded-b-xl border-t p-(--card-spacing)');
   }
 }
