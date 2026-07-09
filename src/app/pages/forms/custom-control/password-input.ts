@@ -10,33 +10,32 @@ import {
 import { FormValueControl } from '@angular/forms/signals';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideEye, lucideEyeOff } from '@ng-icons/lucide';
-import { HlmInputGroupImports } from '@spartan-ng/helm/input-group';
+import { HlmInputGroup, HlmInputGroupImports } from '@spartan-ng/helm/input-group';
 
 @Component({
   selector: 'spartan-password-input',
   imports: [HlmInputGroupImports, NgIcon],
   providers: [provideIcons({ lucideEye, lucideEyeOff })],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  hostDirectives: [HlmInputGroup],
   template: `
-    <hlm-input-group>
-      <input
-        hlmInputGroupInput
-        [id]="inputId()"
-        [placeholder]="placeholder()"
-        [value]="value()"
-        [disabled]="disabled()"
-        [readonly]="readonly()"
-        autoComplete="current-password"
-        [type]="_inputType()"
-        (input)="value.set($event.target.value)"
-        (blur)="touch.emit()"
-      />
-      <hlm-input-group-addon align="inline-end">
-        <button hlmInputGroupButton size="icon-xs" (click)="togglePasswordVisibility()">
-          <ng-icon [name]="_icon()" />
-        </button>
-      </hlm-input-group-addon>
-    </hlm-input-group>
+    <input
+      hlmInputGroupInput
+      [id]="inputId()"
+      [placeholder]="placeholder()"
+      [value]="value()"
+      [disabled]="disabled()"
+      [readonly]="readonly()"
+      autoComplete="current-password"
+      [type]="_inputType()"
+      (input)="value.set($event.target.value)"
+      (blur)="touch.emit()"
+    />
+    <hlm-input-group-addon align="inline-end">
+      <button hlmInputGroupButton size="icon-xs" (click)="togglePasswordVisibility()">
+        <ng-icon [name]="_icon()" />
+      </button>
+    </hlm-input-group-addon>
   `,
 })
 export class PasswordInput implements FormValueControl<string> {
