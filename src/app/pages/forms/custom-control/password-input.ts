@@ -32,8 +32,14 @@ import { HlmInputGroup, HlmInputGroupImports } from '@spartan-ng/helm/input-grou
       (blur)="touch.emit()"
     />
     <hlm-input-group-addon align="inline-end">
-      <button hlmInputGroupButton size="icon-xs" (click)="togglePasswordVisibility()">
+      <button
+        hlmInputGroupButton
+        size="icon-xs"
+        [disabled]="disabled()"
+        (click)="togglePasswordVisibility()"
+      >
         <ng-icon [name]="_icon()" />
+        <span class="sr-only">Toggle password visibility</span>
       </button>
     </hlm-input-group-addon>
   `,
