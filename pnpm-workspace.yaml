@@ -2,6 +2,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - '@spartan-ng/*'
   - '@ng-icons/*'
+
 allowBuilds:
   '@parcel/watcher': false
   esbuild: false

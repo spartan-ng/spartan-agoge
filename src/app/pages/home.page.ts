@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideGithub } from '@ng-icons/lucide';
+import { simpleGithub } from '@ng-icons/simple-icons';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { config } from '../config';
 import { BaseLayout } from '../layouts/base.layout';
@@ -9,7 +9,7 @@ import { Newsletter } from '../ui/newsletter';
 @Component({
   selector: 'spartan-home-page',
   imports: [BaseLayout, HlmButtonImports, NgIcon, Newsletter],
-  providers: [provideIcons({ lucideGithub })],
+  providers: [provideIcons({ simpleGithub })],
   template: `
     <spartan-base-layout>
       <div class="flex flex-col items-center gap-4 py-10">
@@ -31,7 +31,7 @@ import { Newsletter } from '../ui/newsletter';
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ng-icon name="lucideGithub" />
+            <ng-icon name="simpleGithub" />
             GitHub
           </a>
         </div>

@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideGithub, lucideMoon, lucideSun, lucideSwords } from '@ng-icons/lucide';
+import { lucideMoon, lucideSun, lucideSwords } from '@ng-icons/lucide';
+import { simpleGithub } from '@ng-icons/simple-icons';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { config } from '../config';
 import { ThemeService } from '../utils/theme';
@@ -9,7 +10,7 @@ import { ThemeService } from '../utils/theme';
 @Component({
   selector: 'spartan-header',
   imports: [RouterLink, HlmButtonImports, NgIcon],
-  providers: [provideIcons({ lucideSwords, lucideGithub, lucideSun, lucideMoon })],
+  providers: [provideIcons({ simpleGithub, lucideSwords, lucideSun, lucideMoon })],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <header
@@ -33,7 +34,7 @@ import { ThemeService } from '../utils/theme';
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ng-icon name="lucideGithub" />
+          <ng-icon name="simpleGithub" />
           <span class="sr-only">GitHub</span>
         </a>
         <button hlmBtn size="icon-sm" variant="ghost" (click)="_themeService.toggle()">
