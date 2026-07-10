@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { hlmCode, hlmH1, hlmH3, hlmH4, hlmP } from '@spartan-ng/helm/typography';
 import { BaseLayout } from '../../layouts/base.layout';
 import { SignalFormCheckboxDemo } from './signal-forms--checkbox.demo';
 import { SignalFormComplexDemo } from './signal-forms--complex.demo';
+import { SignalFormCustomControlDemo } from './signal-forms--custom-control.demo';
 import { SignalFormInputDemo } from './signal-forms--input.demo';
 import { SignalFormRadioGroupDemo } from './signal-forms--radio-group.demo';
 import { SignalFormSelectDemo } from './signal-forms--select.demo';
@@ -15,6 +17,7 @@ import { BugFormsDemo } from './signal-forms.demo';
   imports: [
     BaseLayout,
     BugFormsDemo,
+    HlmButtonImports,
     SignalFormInputDemo,
     SignalFormTextareaDemo,
     SignalFormSelectDemo,
@@ -22,6 +25,7 @@ import { BugFormsDemo } from './signal-forms.demo';
     SignalFormRadioGroupDemo,
     SignalFormSwitchDemo,
     SignalFormComplexDemo,
+    SignalFormCustomControlDemo,
   ],
   template: `
     <spartan-base-layout>
@@ -93,6 +97,29 @@ import { BugFormsDemo } from './signal-forms.demo';
 
         <div class="mt-4">
           <spartan-signal-form-complex-demo />
+        </div>
+
+        <h2 id="custom-control" class="${hlmH3} pt-(--header-height)">Custom Control</h2>
+        <p class="${hlmP}">
+          Signal Forms allows you to build
+          <a
+            href="https://angular.dev/guide/forms/signals/custom-controls"
+            class="underline"
+            target="_blank"
+            rel="noopener"
+          >
+            custom form controls
+          </a>
+          using the <code class="${hlmCode}">FormValueControl</code> interface.
+        </p>
+
+        <p class="${hlmP}">
+          In this example, we are going to build a custom password input control that toggles
+          visibility and integrates seamlessly with Signal Forms.
+        </p>
+
+        <div class="mt-4">
+          <spartan-signal-form-custom-control-demo />
         </div>
       </section>
     </spartan-base-layout>
