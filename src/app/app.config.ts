@@ -1,12 +1,9 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import {
-  provideClientHydration,
-  withEventReplay,
-  withNoIncrementalHydration,
-} from '@angular/platform-browser';
+import { provideClientHydration } from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideSpartanHlm } from '@spartan-ng/helm/utils';
 import { routes } from './app.routes';
+import { provideTitleStrategy } from './tools/title.strategy';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,7 +12,8 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
-    provideClientHydration(withEventReplay(), withNoIncrementalHydration()),
+    provideClientHydration(),
     provideSpartanHlm(),
+    provideTitleStrategy(),
   ],
 };

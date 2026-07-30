@@ -15,6 +15,7 @@ export const routes: Routes = [
       },
       {
         path: 'signal-forms',
+        title: 'Signal Forms',
         loadComponent: () =>
           import('./pages/forms/signal-forms.page').then((m) => m.SignalFormsPage),
       },
@@ -22,6 +23,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
+    title: 'Page Not Found',
     loadComponent: () => import('./pages/404.page').then((m) => m.NotFoundPage),
   },
 ];

@@ -9,6 +9,12 @@
 
     <!-- Tints the iOS Safari address bar / safe areas; kept in sync below. -->
     <meta name="theme-color" content="#ffffff" />
+
+    <link rel="canonical" href="https://agoge.spartan.ng" />
+
+    <meta name="description" content="Training ground for spartan/ui components" />
+    <meta name="robots" content="index, follow" />
+
     <script>
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         const theme = localStorage.getItem('theme');
@@ -18,10 +24,10 @@
         } else if (theme === 'light') {
           document.documentElement.classList.remove('dark');
         } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
 
         // Match the iOS browser chrome to the resolved theme before first paint.
         const isDark = document.documentElement.classList.contains('dark');

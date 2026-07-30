@@ -2,15 +2,15 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideMoon, lucideSun, lucideSwords } from '@ng-icons/lucide';
-import { simpleGithub } from '@ng-icons/simple-icons';
+import { simpleDiscord, simpleGithub } from '@ng-icons/simple-icons';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { config } from '../config';
-import { ThemeService } from '../utils/theme';
+import { ThemeService } from '../tools/theme';
 
 @Component({
   selector: 'spartan-header',
   imports: [RouterLink, HlmButtonImports, NgIcon],
-  providers: [provideIcons({ simpleGithub, lucideSwords, lucideSun, lucideMoon })],
+  providers: [provideIcons({ simpleGithub, simpleDiscord, lucideSwords, lucideSun, lucideMoon })],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <header
@@ -25,7 +25,23 @@ import { ThemeService } from '../utils/theme';
         <a hlmBtn variant="ghost" size="sm" routerLink="/forms"> Forms </a>
       </nav>
 
-      <div class="ml-auto flex gap-1">
+      <div class="ml-auto flex gap-2">
+        <button hlmBtn size="icon-sm" variant="ghost" (click)="_themeService.toggle()">
+          <ng-icon name="lucideMoon" class="dark:hidden" />
+          <ng-icon name="lucideSun" class="not-dark:hidden" />
+          <span class="sr-only">Toggle theme</span>
+        </button>
+        <a
+          hlmBtn
+          size="icon-sm"
+          variant="ghost"
+          href="${config.discord}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ng-icon name="simpleDiscord" />
+          <span class="sr-only">Discord</span>
+        </a>
         <a
           hlmBtn
           size="icon-sm"
@@ -37,11 +53,6 @@ import { ThemeService } from '../utils/theme';
           <ng-icon name="simpleGithub" />
           <span class="sr-only">GitHub</span>
         </a>
-        <button hlmBtn size="icon-sm" variant="ghost" (click)="_themeService.toggle()">
-          <ng-icon name="lucideMoon" class="dark:hidden" />
-          <ng-icon name="lucideSun" class="not-dark:hidden" />
-          <span class="sr-only">Toggle theme</span>
-        </button>
       </div>
     </header>
   `,
