@@ -38,8 +38,8 @@ import { ThemeService } from '../utils/theme';
           <span class="sr-only">GitHub</span>
         </a>
         <button hlmBtn size="icon-sm" variant="ghost" (click)="_themeService.toggle()">
-          <ng-icon name="lucideMoon" class="not-dark:hidden" />
-          <ng-icon name="lucideSun" class="dark:hidden" />
+          <ng-icon name="lucideMoon" class="dark:hidden" />
+          <ng-icon name="lucideSun" class="not-dark:hidden" />
           <span class="sr-only">Toggle theme</span>
         </button>
       </div>
