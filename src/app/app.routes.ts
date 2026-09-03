@@ -22,6 +22,11 @@ export const routes: Routes = [
     ],
   },
   {
+    path: 'demo',
+    title: 'Demo',
+    loadComponent: () => import('./pages/demo/demo.page').then((m) => m.DemoPage),
+  },
+  {
     path: '**',
     title: 'Page Not Found',
     loadComponent: () => import('./pages/404.page').then((m) => m.NotFoundPage),
