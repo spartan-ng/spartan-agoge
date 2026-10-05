@@ -1,11 +1,7 @@
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-  - '@angular/*'
-  - '@angular-devkit/*'
-  - '@schematics/angular*'
-  - '@ng-icons/*'
   - '@spartan-ng/*'
-  - 'postcss@8.5.27'
+  - postcss@8.5.29
 
 allowBuilds:
   '@parcel/watcher': false
