@@ -7,8 +7,8 @@ import { classes } from '@spartan-ng/helm/utils';
   selector: '[hlmTextarea]',
   exportAs: 'hlmTextarea',
   hostDirectives: [
-    { directive: BrnTextarea, inputs: ['id', 'forceInvalid'] },
-    BrnFieldControlDescribedBy,
+    { directive: BrnTextarea, inputs: ['id', 'forceInvalid', 'aria-invalid'] },
+    { directive: BrnFieldControlDescribedBy, inputs: ['aria-describedby'] },
   ],
   host: { 'data-slot': 'textarea' },
 })

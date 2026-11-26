@@ -7,8 +7,8 @@ import { classes } from '@spartan-ng/helm/utils';
   selector: '[hlmInput]',
   exportAs: 'hlmInput',
   hostDirectives: [
-    { directive: BrnInput, inputs: ['id', 'forceInvalid'] },
-    BrnFieldControlDescribedBy,
+    { directive: BrnInput, inputs: ['id', 'forceInvalid', 'aria-invalid'] },
+    { directive: BrnFieldControlDescribedBy, inputs: ['aria-describedby'] },
   ],
   host: { 'data-slot': 'input' },
 })
